@@ -66,6 +66,7 @@ defprotocol Poison.Encoder do
 end
 
 defimpl Poison.Encoder, for: Atom do
+  def encode(:null, _), do: "null"
   def encode(nil, _),   do: "null"
   def encode(true, _),  do: "true"
   def encode(false, _), do: "false"

@@ -7,6 +7,7 @@ defmodule Poison.EncoderTest do
     assert to_json(nil) == "null"
     assert to_json(true) == "true"
     assert to_json(false) == "false"
+    assert to_json(:null) == "null"
     assert to_json(:poison) == ~s("poison")
   end
 
